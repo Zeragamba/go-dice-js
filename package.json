@@ -1,0 +1,8 @@
+{
+  "name": "go-dice-api",
+  "version": "0.2.0",
+  "main": "index.js",
+  "repository": "https://github.com/Zeragamba/GoDiceApi.git",
+  "author": "Zeragamba <Zera@zeragamba.ca>",
+  "license": "MIT"
+}
