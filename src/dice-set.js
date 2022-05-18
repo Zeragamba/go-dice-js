@@ -2,9 +2,9 @@ if (!window.GoDice) {
   throw Error(
     'GoDice API not found.\n' +
     'Please grab a copy of it from the official repo:\n' +
-    'Official GoDice API: https://github.com/ParticulaCode/GoDiceJavaScriptAPI\n' +
+    '\tOfficial GoDice API: https://github.com/ParticulaCode/GoDiceJavaScriptAPI\n' +
     'and add it to the window object:\n' +
-    '`window.GoDice = GoDice`',
+    '\t`window.GoDice = GoDice`',
   );
 }
 
