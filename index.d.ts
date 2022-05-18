@@ -3,13 +3,13 @@ import Die from './src/die';
 import LedColor, { LedOff, LedRgb } from './src/led-color';
 
 export const diceSet: DiceSet;
-const LED_OFF = LedColor.OFF;
+export const LED_OFF: LedOff;
 
 export {
   Die,
   LedColor,
-  LED_OFF,
 
+  DiceSet,
   LedRgb,
   LedOff,
 };
