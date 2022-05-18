@@ -1,7 +1,7 @@
 const diceSet = require('./src/dice-set');
-const Led = require('./src/led');
+const LedColor = require('./src/led-color');
 
 module.exports = {
   diceSet,
-  Led,
+  LedColor,
 };

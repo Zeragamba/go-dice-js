@@ -1,10 +1,10 @@
 import DiceSet from './src/dice-set';
 import Die from './src/die';
-import * as Led from './src/led';
+import * as LedColor from './src/led-color';
 
 export const diceSet: DiceSet;
 
 export {
   Die,
-  Led,
+  LedColor,
 };
