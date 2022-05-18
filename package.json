@@ -1,0 +1,12 @@
+{
+  "name": "go-dice-react",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/Zeragamba/GoDiceReact.git",
+  "author": "Zeragamba <Zera@zeragamba.ca>",
+  "license": "MIT",
+  "license": "MIT",
+  "peerDependencies": {
+    "go-dice-api": "^0.3.1"
+  }
+}
