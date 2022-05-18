@@ -15,6 +15,7 @@ This supports the following features of the GoDice API:
 - Setting LED colors
 - Getting the battery level
 - Getting the colour of the die
+- React hooks (via [go-dice-react](https://www.npmjs.com/package/go-dice-react))
 
 Future features:
 
@@ -81,7 +82,7 @@ diceSet.on('connected', (die: Die) => {
   die.getBatteryLevel().then((level: number) => console.log(level))
 
   // Passively listen for the battery level
-  die.on('battryLevel', (level: number) => console.log(`Battery: ${level}%`)) // level: 0-100
+  die.on('batteryLevel', (level: number) => console.log(`Battery: ${level}%`)) // level: 0-100
 
   // Request the colour of the Die
   die.getColour().then((color: string) => console.log(color))
