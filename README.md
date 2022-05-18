@@ -9,6 +9,7 @@ be downloaded from the official repo: https://github.com/ParticulaCode/GoDiceJav
 ## Overview:
 
 This supports the following features of the GoDice API:
+
 - Connecting to dice
 - Reading the value of the dice
 - Setting LED colors
@@ -16,6 +17,7 @@ This supports the following features of the GoDice API:
 - Getting the colour of the die
 
 Future features:
+
 - Hex support for LEDs
 - Self implemented API
 - RPG Dice Shell support
@@ -56,7 +58,7 @@ Add the Official API to the page
 ## Usage
 
 ```ts
-import { diceSet, Die, Led } from 'go-dice-api'
+import { diceSet, Die, LED_OFF } from 'go-dice-api'
 
 // Ask the user to connect a die
 diceSet.requestDie()
@@ -65,9 +67,9 @@ diceSet.on('connected', (die: Die) => {
   // a die was connected!
 
   // Set the colour of the leds
-  die.setLed([0, 0, 255]) // [Red, Green Blue]
+  die.setLed([0, 0, 255]) // [Red, Green, Blue]
   die.setLed([0, 0, 255], [255, 0, 0]) // Set the two lights separately 
-  die.setLed(Die.LED_OFF)
+  die.setLed(LED_OFF)
 
   // Listen for the user to start rolling the dice
   die.on('rollStart', () => console.log("Rolling..."))

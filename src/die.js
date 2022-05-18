@@ -1,9 +1,6 @@
 const EventEmitter = require('./event-emitter');
-const LedColor = require('./led-color');
 
 class Die extends EventEmitter {
-  static LED_OFF = LedColor.OFF;
-
   static Color = {
     0: 'Black',
     1: 'Red',
