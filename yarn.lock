@@ -2,6 +2,3 @@
 # yarn lockfile v1
 
 
-"go-dice-api@file:../GoDiceApi":
-  "resolved" "file:../GoDiceApi"
-  "version" "0.3.2"
