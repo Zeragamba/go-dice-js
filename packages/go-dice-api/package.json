@@ -1,0 +1,16 @@
+{
+  "name": "go-dice-api",
+  "version": "0.3.2",
+  "type": "module",
+  "exports": "./index.js",
+  "repository": "https://github.com/Zeragamba/GoDiceApi.git",
+  "author": "Zeragamba <Zera@zeragamba.ca>",
+  "license": "MIT",
+  "keywords": [
+    "GoDice",
+    "go-dice",
+    "smart-dice",
+    "wrapper",
+    "api"
+  ]
+}
