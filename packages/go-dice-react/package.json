@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "type": "module",
   "exports": "./index.js",
-  "repository": "https://github.com/Zeragamba/GoDiceReact.git",
+  "repository": "https://github.com/Zeragamba/go-dice-js/tree/main/packages/go-dice-react",
   "author": "Zeragamba <Zera@zeragamba.ca>",
   "license": "MIT",
   "devDependencies": {
