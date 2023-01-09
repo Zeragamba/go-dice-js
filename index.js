@@ -1,8 +1,6 @@
-const diceSet = require('./src/dice-set');
-const LedColor = require('./src/led-color');
+import diceSet from "./src/dice-set";
+import LedColor from "./src/led-color";
 
-module.exports = {
-  diceSet,
-  LedColor,
-  LED_OFF: LedColor.OFF,
-};
+const LED_OFF = LedColor.OFF;
+
+export { diceSet, LedColor, LED_OFF };

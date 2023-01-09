@@ -1,15 +1,8 @@
-import DiceSet from './src/dice-set';
-import Die from './src/die';
-import LedColor, { LedOff, LedRgb } from './src/led-color';
+import DiceSet from "./src/dice-set";
+import Die, { Color } from "./src/die";
+import LedColor, { LedOff, LedRgb } from "./src/led-color";
 
 export const diceSet: DiceSet;
 export const LED_OFF: LedOff;
 
-export {
-  Die,
-  LedColor,
-
-  DiceSet,
-  LedRgb,
-  LedOff,
-};
+export { Die, Color, LedColor, DiceSet, LedRgb, LedOff };
