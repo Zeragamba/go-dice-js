@@ -6,7 +6,7 @@ export function useDieColor(die: Die): string;
 
 export function useRolling(die: Die): boolean;
 
-export function useDieValue(die: Die): number;
+export function useDieValue(die: Die): string;
 
 export function useAccRaw(die: Die): [X: number, Y: number, Z: number];
 
