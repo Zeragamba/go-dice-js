@@ -1,0 +1,13 @@
+{
+  "name": "go-dice-js",
+  "private": true,
+  "scripts": {
+    "start": "lerna run start --parallel"
+  },
+  "workspaces": [
+    "./*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.4.0"
+  }
+}
