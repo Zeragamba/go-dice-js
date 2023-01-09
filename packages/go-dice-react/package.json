@@ -1,12 +1,15 @@
 {
   "name": "go-dice-react",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "type": "module",
   "exports": "./index.js",
   "repository": "https://github.com/Zeragamba/GoDiceReact.git",
   "author": "Zeragamba <Zera@zeragamba.ca>",
   "license": "MIT",
+  "devDependencies": {
+    "go-dice-api": "^0.4.0"
+  },
   "peerDependencies": {
-    "go-dice-api": "^0.3.1"
+    "go-dice-api": "^0.4.0"
   }
 }

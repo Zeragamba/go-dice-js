@@ -1,5 +1,5 @@
 import EventEmitter from "./event-emitter";
-import { LedColor } from "./led-color";
+import { LedColorType } from './led-color';
 
 export enum Color {
   0 = "Black",
@@ -13,7 +13,7 @@ export enum Color {
 type DieInstance = {
   getBatteryLevel(): void;
   getDiceColor(): void;
-  setLed(led1: LedColor, led2: LedColor): void;
+  setLed(led1: LedColorType, led2: LedColorType): void;
   setDieType(dieType: DieTypes): void;
 };
 

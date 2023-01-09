@@ -1,11 +1,14 @@
 export type LedRgb = [red: number, green: number, blue: number];
-export type LedOff = [0]
+export type LedOff = [0];
+export type LedColorType = LedOff | LedRgb;
 
-const LedColor = {
+export type DefaultLedColors = {
   OFF: LedOff,
   RED: LedRgb,
   GREEN: LedRgb,
   BLUE: LedRgb,
 };
+
+declare const LedColor: DefaultLedColors;
 
 export default LedColor;

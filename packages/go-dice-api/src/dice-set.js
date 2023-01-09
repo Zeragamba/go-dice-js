@@ -8,8 +8,8 @@ if (!window.GoDice) {
   );
 }
 
-import EventEmitter from "./event-emitter";
-import Die from "./die";
+import EventEmitter from "./event-emitter.js";
+import Die from "./die.js";
 
 GoDice = window.GoDice;
 
@@ -48,7 +48,7 @@ GoDice.prototype.onDiceColor = (dieId, color) => {
   diceSet.dice[dieId].emit("color", color);
 };
 
-GoDice.prototype.onStable = (dieId, value, xyzAccRaw) => {
+GoDice.prototype.onStable = (dieId, value) => {
   diceSet.dice[dieId].emit("stable", value);
 };
 

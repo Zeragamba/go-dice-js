@@ -5,7 +5,7 @@
     "start": "lerna run start --parallel"
   },
   "workspaces": [
-    "./*"
+    "packages/*"
   ],
   "devDependencies": {
     "lerna": "^6.4.0"

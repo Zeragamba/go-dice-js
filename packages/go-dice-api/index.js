@@ -1,5 +1,5 @@
-import diceSet from "./src/dice-set";
-import LedColor from "./src/led-color";
+import diceSet from "./src/dice-set.js";
+import LedColor from "./src/led-color.js";
 
 const LED_OFF = LedColor.OFF;
 
