@@ -15,7 +15,11 @@ export function useDiceSet() {
     return () => diceSet.off("connected", onDieConnected);
   }, []);
 
-  return [dice, diceSet.requestDie];
+  function removeDie(dieId) {
+    setDice(dice.filter((die) => die.id !== dieId));
+  }
+
+  return [dice, diceSet.requestDie, removeDie];
 }
 
 export function useDieColor(die) {
@@ -91,4 +95,20 @@ export function useBatteryLevel(die, interval = 1000) {
   }, [die, interval]);
 
   return level;
+}
+
+export function useConnectionStatus(die) {
+  const [connected, setConnection] = useState(true);
+
+  useEffect(() => {
+    die.on("connected", () => setConnection(true));
+    die.on("disconnected", () => setConnection(false));
+
+    return () => {
+      die.off("connected", () => setConnection(true));
+      die.off("disconnected", () => setConnection(false));
+    };
+  });
+
+  return connected;
 }

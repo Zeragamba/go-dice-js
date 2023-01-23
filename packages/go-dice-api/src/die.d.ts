@@ -1,5 +1,5 @@
 import EventEmitter from "./event-emitter";
-import { LedColorType } from './led-color';
+import { LedColorType } from "./led-color";
 
 export enum Color {
   0 = "Black",
@@ -30,6 +30,8 @@ export default class Die extends EventEmitter {
     dieType: number;
   };
 
+  connected: boolean;
+
   on(event: "rollStart", handler: () => void): void;
   on(event: "stable", handler: (value: string) => void): void;
   on(event: "value", handler: (value: string) => void): void;
@@ -54,6 +56,10 @@ export default class Die extends EventEmitter {
   on(event: "batteryLevel", handler: (level: number) => void): void;
   on(event: "color", handler: (colourId: number) => void): void;
   on(event: "disconnected", handler: () => void): void;
+
+  disconnect(): void;
+
+  reconnect(): Promise<void>;
 
   getBatteryLevel(): Promise<number>;
 

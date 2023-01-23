@@ -1,5 +1,6 @@
 import EventEmitter from "./event-emitter.js";
 
+// @ts-ignore
 let GoDice = window.GoDice;
 
 export default class Die extends EventEmitter {
@@ -20,6 +21,7 @@ export default class Die extends EventEmitter {
     this.#id = id;
     this.#color = undefined;
     this.instance = instance;
+    this.connected = instance.bluetoothDevice.gatt.connected;
 
     this.on("stable", (value) => this.onValue(value));
     this.on("moveStable", ([value, xyzAccRaw]) => {
@@ -34,6 +36,7 @@ export default class Die extends EventEmitter {
       this.onValue(value);
       this.onAccRaw(xyzAccRaw);
     });
+    this.on("disconnected", () => this.onDisconnect());
   }
 
   get id() {
@@ -48,8 +51,24 @@ export default class Die extends EventEmitter {
     this.emit("accRaw", xyzAccRaw);
   }
 
+  disconnect() {
+    this.instance.bluetoothDevice.gatt.disconnect();
+  }
+
+  onDisconnect() {
+    this.connected = false;
+  }
+
+  async reconnect() {
+    await this.instance.attemptReconnect();
+  }
+
   getBatteryLevel() {
     return new Promise((resolve) => {
+      if (!this.connected) {
+        return 0;
+      }
+
       const onBatteryLevel = (level) => {
         resolve(level);
         this.off("batteryLevel", onBatteryLevel);
