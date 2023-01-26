@@ -36,6 +36,10 @@ GoDice.prototype.onDiceConnected = (dieId, diceInstance) => {
   }
 };
 
+GoDice.prototype.onDiceDisconnected = (dieId, dieInstance) => {
+  diceSet.dice[dieId].emit("disconnected", dieInstance);
+};
+
 GoDice.prototype.onRollStart = (dieId) => {
   diceSet.dice[dieId].emit("rollStart");
 };
