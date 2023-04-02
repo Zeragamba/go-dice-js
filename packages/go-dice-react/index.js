@@ -11,6 +11,7 @@ export function useDiceSet() {
     };
 
     diceSet.on("connected", onDieConnected);
+    diceSet.on("reconnected", onDieConnected);
 
     return () => diceSet.off("connected", onDieConnected);
   }, []);
