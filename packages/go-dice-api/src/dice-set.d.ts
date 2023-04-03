@@ -1,5 +1,5 @@
-import EventEmitter from "./event-emitter";
-import Die from "./die";
+import EventEmitter from './event-emitter';
+import Die from './die';
 
 declare const GoDice: any;
 
