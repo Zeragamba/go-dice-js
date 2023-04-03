@@ -4,8 +4,8 @@ import Die from "./die";
 declare const GoDice: any;
 
 export default class DiceSet extends EventEmitter {
-  requestDie(): void;
+  requestDie (): void
 
-  on(event: "connected", handler: (die: Die) => void);
-  on(event: "reconnected", handler: (die: Die) => void);
+  on (event: "connected", handler: (die: Die) => void)
+  on (event: "reconnected", handler: (die: Die) => void)
 }
