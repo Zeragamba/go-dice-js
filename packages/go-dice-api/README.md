@@ -28,9 +28,8 @@ Future features:
 Requires the Bluetooth Browser APIs, which are only available in Chrome and
 Chromium based browsers at time of writing.
 
-Check [MDN's browser support](mdn-bluetooth) page for up-to-date info
+Check [MDN's browser support](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility) page for up-to-date info
 
-[mdn-bluetooth]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility
 
 ## Install
 
